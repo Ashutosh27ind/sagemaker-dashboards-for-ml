@@ -14,7 +14,7 @@ def predict(text, min_length, max_length, temperature):
             'temperature': temperature
         }
     }
-    sagemaker_client = boto3.client('sagemaker-runtime', region_name='us-west-2')
+    sagemaker_client = boto3.client('sagemaker-runtime', region_name='eu-west-1')
     try:
         response = sagemaker_client.invoke_endpoint(
             EndpointName=os.environ['DASHBOARD_SAGEMAKER_MODEL'], 
